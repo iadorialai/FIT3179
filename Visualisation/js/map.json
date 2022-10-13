@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Current Average Protein Supply (g/capita/day) 2022",
     "width": 800,
     "height": 400,
     "projection": {"type": "equalEarth"},
