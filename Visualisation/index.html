@@ -12,7 +12,7 @@
 
 </head>
 <body>
-
+<center>
 <script type="text/javascript">
 
   var v1 = "js/ethiopia.json";
@@ -30,30 +30,77 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var v4 = "js/ethiopia.json";
-  vegaEmbed('#choropleth_map', v4).then(function(result) {
+  var v4 = "js/line.json";
+  vegaEmbed('#line', v4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var v5 = "js/ethiopia.json";
-  vegaEmbed('#choropleth_map', v5).then(function(result) {
+  var v5 = "js/filter.json";
+  vegaEmbed('#filter', v5).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var v6 = "js/ethiopia.json";
-  vegaEmbed('#choropleth_map', v6).then(function(result) {
+  var v6 = "js/bar.json";
+  vegaEmbed('#bar', v6).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
 </script>
+<!-- Visualisation 1: -->
+<div>
+  <h2> VIS 1 TITLE</h2>
+  <div id="ethiopia"></div>
+  <br><br><br><br>
+  <p style = "font-size: 18px">
+  sample text <br>
+  </p>
+</div>
+<!-- Visualisation 2: -->
+<div>
+  <h2> VIS 1 TITLE</h2>
+  <div id="ethchoropleth_mapiopia"></div>
+  <br><br><br><br>
+  <p style = "font-size: 18px">
+  sample text <br>
+  </p>
+</div>
+<!-- Visualisation 3: -->
+<div>
+  <h2> VIS 1 TITLE</h2>
+  <div id="map"></div>
+  <br><br><br><br>
+  <p style = "font-size: 18px">
+  sample text <br>
+  </p>
+</div>
+<!-- Visualisation 4: -->
+<div>
+  <h2> VIS 1 TITLE</h2>
+  <div id="line"></div>
+  <br><br><br><br>
+  <p style = "font-size: 18px">
+  sample text <br>
+  </p>
+</div>
+<!-- Visualisation 5: -->
+<div>
+  <h2> VIS 1 TITLE</h2>
+  <div id="filter"></div>
+  <br><br><br><br>
+  <p style = "font-size: 18px">
+  sample text <br>
+  </p>
+</div>
+<!-- Visualisation 6: -->
+<div>
+  <h2> VIS 1 TITLE</h2>
+  <div id="bar"></div>
+  <br><br><br><br>
+  <p style = "font-size: 18px">
+  sample text <br>
+  </p>
+</div>
 
-<div id="ethiopia"></div>
-<div id="choropleth_map"></div>
-<div id="map"></div>
-<div id="choropleth_map"></div>
-<div id="choropleth_map"></div>
-<div id="choropleth_map"></div>
-
-
+</center>
 </body>
 </html>

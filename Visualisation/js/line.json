@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/iadorialai/FIT3179/main/Visualisation/data/stunt5food_def_countries.csv"
+  },
+
+  "vconcat": [
+    {
+      "width": 600,
+      "height": 300,
+      "mark": "line",
+      "transform": [{
+        "filter": "datum.Area == 'Afghanistan' || datum.Area == 'Bangladesh' || datum.Area == 'Chad'|| datum.Area == 'Ethiopia'|| datum.Area == 'Haiti'" 
+      }],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "scale": {"domain": {"param": "time_brush"}},
+          "axis": {"title": "", "grid": false}
+        },
+        "y": {
+          "title": "% of Children under 5 with stunted growth",
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "color": {"field": "Area"}
+      }
+    },
+    {
+      "width": 600,
+      "height": 60,
+      "mark": "line",
+      "params": [
+        {
+          "name": "time_brush",
+          "select": {"type": "interval", "encodings": ["x"]}
+        }
+      ],
+      "encoding": {
+        "x": {"field": "Year", "timeUnit": "year", "axis": {"title": ""}},
+        "y": {
+          "field": "Value",
+          "aggregate": "average",
+          "axis": {"grid": false},
+          "title": "%"
+        }
+      }
+    }
+  ]
+}
