@@ -24,7 +24,26 @@
           "field": "Value",
           "type": "quantitative"
         },
-        "color": {"field": "Area"}
+        "color": {
+          "field": "Area",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Afghanistan",
+              "Bangladesh",
+              "Chad",
+              "Ethiopia",
+              "Haiti"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#a65628"
+            ]
+          }
+        }
       }
     },
     {
