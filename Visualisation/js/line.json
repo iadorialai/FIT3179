@@ -8,9 +8,9 @@
     {
       "width": 600,
       "height": 300,
-      "mark": "line",
+      "mark": {"type": "line", "point": true},
       "transform": [{
-        "filter": "datum.Area == 'Afghanistan' || datum.Area == 'Bangladesh' || datum.Area == 'Chad'|| datum.Area == 'Ethiopia'|| datum.Area == 'Haiti'" 
+        "filter": "datum.Area == 'Afghanistan' || datum.Area == 'Bangladesh' || datum.Area == 'Congo'|| datum.Area == 'Ethiopia'|| datum.Area == 'Haiti'" 
       }],
       "encoding": {
         "x": {
@@ -31,7 +31,7 @@
             "domain": [
               "Afghanistan",
               "Bangladesh",
-              "Chad",
+              "Congo",
               "Ethiopia",
               "Haiti"
             ],
@@ -43,7 +43,12 @@
               "#a65628"
             ]
           }
-        }
+        },
+        "tooltip": [
+          {"field": "Year Code", "title": "Year"},
+          {"field": "Value", "title": "% of Children under 5 with stunted growth"},
+          {"field": "Area", "title": "Country"}
+        ]
       }
     },
     {

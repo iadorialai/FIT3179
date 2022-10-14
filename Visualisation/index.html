@@ -17,56 +17,23 @@
 <h1>Food Security in Developing Countries</h1> 
 <script type="text/javascript">
 
-  var v1 = "js/ethiopia.json";
-  vegaEmbed('#ethiopia', v1).then(function(result) {
+  var v1 = "js/map.json";
+  vegaEmbed('#map', v1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var v2 = "js/choropleth_map.vg.json";
-  vegaEmbed('#choropleth_map', v2).then(function(result) {
+  var v2 = "js/line.json";
+  vegaEmbed('#line', v2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var v3 = "js/map.json";
-  vegaEmbed('#map', v3).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  var v4 = "js/line.json";
-  vegaEmbed('#line', v4).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  var v5 = "js/filter.json";
-  vegaEmbed('#filter', v5).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  var v6 = "js/bar.json";
-  vegaEmbed('#bar', v6).then(function(result) {
+  var v3 = "js/bar.json";
+  vegaEmbed('#bar', v3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
 </script>
 <!-- Visualisation 1: -->
-<div>
-  <h2> VIS 1 TITLE</h2>
-  <div id="ethiopia"></div>
-  <br><br><br><br>
-  <p style = "font-size: 18px">
-  sample text <br>
-  </p>
-</div>
-<!-- Visualisation 2: -->
-<div>
-  <h2> VIS 2 TITLE</h2>
-  <div id="choropleth_map"></div>
-  <br><br><br><br>
-  <p style = "font-size: 18px">
-  sample text <br>
-  </p>
-</div>
-<!-- Visualisation 3: -->
 <div>
   <h2> Current Average Protein Supply</h2>
   <div id="map"></div>
@@ -75,7 +42,7 @@
   sample text <br>
   </p>
 </div>
-<!-- Visualisation 4: -->
+<!-- Visualisation 2: -->
 <div>
   <h2> Percentage of children under 5 years of age who are stunted</h2>
   <div id="line"></div>
@@ -84,24 +51,16 @@
   sample text <br>
   </p>
 </div>
-<!-- Visualisation 5: -->
+<!-- Visualisation 3: -->
 <div>
-  <h2> VIS 5 TITLE</h2>
-  <div id="filter"></div>
-  <br><br><br><br>
-  <p style = "font-size: 18px">
-  sample text <br>
-  </p>
-</div>
-<!-- Visualisation 6: -->
-<div>
-  <h2> VIS 6 TITLE</h2>
+  <h2> Proportion of people experiencing food insecurity</h2>
   <div id="bar"></div>
   <br><br><br><br>
   <p style = "font-size: 18px">
   sample text <br>
   </p>
 </div>
+
 
 </center>
 

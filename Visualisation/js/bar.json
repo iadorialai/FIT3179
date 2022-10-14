@@ -3,23 +3,47 @@
   "width": "container",
   "height": "container",
   "data": {
-    "url": "https://raw.githubusercontent.com/iadorialai/FIT3179/main/Visualisation/data/gdp.csv"
+    "url": "https://raw.githubusercontent.com/iadorialai/FIT3179/main/Visualisation/data/food_secu.csv"
   },
   "mark": "bar",
+  "transform": [{
+        "filter": "datum.Area == 'Afghanistan' || datum.Area == 'Bangladesh' || datum.Area == 'Congo'|| datum.Area == 'Ethiopia'|| datum.Area == 'Haiti'" 
+      }],
   "encoding": {
-    "x": {"field": "GDP", "type": "quantitative", "title": "GDP"},
+    "x": {"field": "FI", "type": "quantitative", "title": "% of population experiencing moderate to severe food insecurity"},
     "y": {
       "field": "Area",
       "type": "nominal",
       "title": "",
       "sort": {"encoding": "x", "order": "descending"}
-    }
+    },
+    "color": {
+          "field": "Area",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Afghanistan",
+              "Bangladesh",
+              "Congo",
+              "Ethiopia",
+              "Haiti"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#a65628"
+            ]
+          }
+        },
+    "tooltip": [
+          {"field": "FI", "title": "% of country experiencing moderate to severe food insecurity"},
+          {"field": "Area", "title": "Country"}
+        ]
   },
   "config": {
-    "background": "#F3FAF9",
     "axis": {
-      "titleColor": "#527298",
-      "labelColor": "#527298",
       "labelFont": "sans-serif",
       "labelFontSize": 15,
       "titleFontSize": 15
