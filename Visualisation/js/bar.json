@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": "container",
+  "width": 600,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/iadorialai/FIT3179/main/Visualisation/data/food_secu.csv"
   },
@@ -20,6 +20,7 @@
     "color": {
           "field": "Area",
           "type": "nominal",
+          "legend": null,
           "scale": {
             "domain": [
               "Afghanistan",

@@ -9,55 +9,61 @@
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
-
+  
+  <script type="text/javascript">
+  
+    var v1 = "js/map.json";
+    vegaEmbed('#map', v1, {"actions": false}).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
+    var v2 = "js/line.json";
+    vegaEmbed('#line', v2, {"actions": false}).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
+    var v3 = "js/bar.json";
+    vegaEmbed('#bar', v3, {"actions": false}).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
+  </script>
 </head>
 <body>
   
 <center>
-<h1>Food Security in Developing Countries</h1> 
-<script type="text/javascript">
-
-  var v1 = "js/map.json";
-  vegaEmbed('#map', v1).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  var v2 = "js/line.json";
-  vegaEmbed('#line', v2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  var v3 = "js/bar.json";
-  vegaEmbed('#bar', v3).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-</script>
+  <h1>Food Security in Developing Countries</h1> 
 <!-- Visualisation 1: -->
-<div>
-  <h2> Current Average Protein Supply</h2>
-  <div id="map"></div>
-  <br><br><br><br>
-  <p style = "font-size: 18px">
-  sample text <br>
-  </p>
-</div>
-<!-- Visualisation 2: -->
-<div>
-  <h2> Percentage of children under 5 years of age who are stunted</h2>
-  <div id="line"></div>
-  <br><br><br><br>
-  <p style = "font-size: 18px">
-  sample text <br>
-  </p>
-</div>
-<!-- Visualisation 3: -->
 <div>
   <h2> Proportion of people experiencing food insecurity</h2>
   <div id="bar"></div>
-  <br><br><br><br>
+  <br><br>
   <p style = "font-size: 18px">
-  sample text <br>
+    The top 5 most food insecure countries are <span style="color:#ff7f00">Congo</span>, <span style="color:#a65628">Haiti</span>, <span style="color:#e41a1c">Afghanistan</span>,
+    <span style="color:#a6cee3">Ethiopia</span> and <span style="color:#984ea3">Bangladesh</span>
+  <br><br><br>
+  </p>
+</div>
+
+<!-- Visualisation 2: -->
+<div>
+  <h2> Current Average Protein Supply</h2>
+  <div id="map"></div>
+  <br><br>
+  <p style = "font-size: 18px">
+  This is a world map of the latest recorded data of protein intake in grams per capita per day <br>
+  <br><br>
+  </p>
+</div>
+
+<!-- Visualisation 3: -->
+<div>
+  <h2> Percentage of children under 5 years of age who are stunted</h2>
+  <div id="line"></div>
+  <br><br>
+  <p style = "font-size: 18px">
+  There has been an average downwards trend of stunted children in the most food insecure countries <br>
+  <br><br>
   </p>
 </div>
 

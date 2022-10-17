@@ -1,5 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+  "style": {
+    "cell": {
+      "stroke": "transparent"
+    }
+  }
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/iadorialai/FIT3179/main/Visualisation/data/stunt5food_def_countries.csv"
   },
@@ -9,6 +16,7 @@
       "width": 600,
       "height": 300,
       "mark": {"type": "line", "point": true},
+      
       "transform": [{
         "filter": "datum.Area == 'Afghanistan' || datum.Area == 'Bangladesh' || datum.Area == 'Congo'|| datum.Area == 'Ethiopia'|| datum.Area == 'Haiti'" 
       }],
@@ -27,6 +35,7 @@
         "color": {
           "field": "Area",
           "type": "nominal",
+          "legend": null,
           "scale": {
             "domain": [
               "Afghanistan",
